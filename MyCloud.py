@@ -50,7 +50,7 @@ class MyCloudApp(App):
         self.resPath = r"./webRes/myCloud"
         if not os.path.exists(self.resPath):
             os.makedirs(self.resPath)
-        self.btUploadFile = gui.FileUploader(self.uploadFilePath, multiple_selection_allowed=True, width=200, height=30, margin='10px')
+        self.btUploadFile = gui.FileUploader(self.uploadFilePath, multiple_selection_allowed=False, width=200, height=30, margin='10px')
         self.btUploadFile.onsuccess.do(self.fileupload_on_success)
         self.btUploadFile.onfailed.do(self.fileupload_on_failed)
 
